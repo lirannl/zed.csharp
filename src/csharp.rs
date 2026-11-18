@@ -3,7 +3,10 @@ mod language_servers;
 
 use std::collections::HashMap;
 
-use zed_extension_api::{self as zed, settings::LspSettings, Result};
+use zed_extension_api::{
+    self as zed, settings::LspSettings, DebugAdapterBinary, DebugConfig, DebugRequest, DebugScenario, DebugTaskDefinition,
+    Result, StartDebuggingRequestArgumentsRequest, TaskTemplate,
+};
 
 use crate::debuggers::{netcoredbg, Netcoredbg};
 use crate::language_servers::{CsharpLs, Omnisharp, Roslyn};
